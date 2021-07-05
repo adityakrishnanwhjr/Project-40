@@ -40,12 +40,12 @@ class Game{
                 form.hide();
 
                 Player.getPlayerInfo();
+                 var displayPosition = 50;
                  image(back_img, 0, 0, 1000, 800);
                  var x =100;
                  var y=200;
                  var index =0;
                  drawSprites();
-                 
                  for(var plr in allPlayers){
                     
                      index = index+1;
@@ -54,6 +54,7 @@ class Game{
                      
                      players[index -1].x = x;
                      players[index - 1].y = y;
+                     displayPosition+=30;
                        
                      if(index === player.index){
                          
@@ -65,7 +66,7 @@ class Game{
                        fill("white");
                        display_Position+=30;
                        textSize(25);
-                       text(allPlayers[plr].name + " : " + allPlayers[plr].score,50,display_Position);
+                       text(allPlayers[plr].name + " : " + allPlayers[plr].score,50,displayPosition);
 
                          
                      }
