@@ -45,7 +45,7 @@ class Game{
                  var y=200;
                  var index =0;
                  drawSprites();
-                 var display_Position=50;
+                 
                  for(var plr in allPlayers){
                     
                      index = index+1;
@@ -59,15 +59,14 @@ class Game{
                          
                        //add code to display the player's name on the respective basket
 
+                       textSize(25);
+                       fill("black");
+                       text(allPlayers[plr].name,x-25,y+25);
                        fill("white");
                        display_Position+=30;
                        textSize(25);
                        text(allPlayers[plr].name + " : " + allPlayers[plr].score,50,display_Position);
 
-
-                       textSize(25);
-                       fill("black");
-                       text(allPlayers[plr].name,x-25,y+25);
                          
                      }
                     
